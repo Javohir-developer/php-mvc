@@ -10,6 +10,7 @@ ini_set('display_errors', 1); // дает команду интерпретат�
 require __DIR__ . '/../../vendor/autoload.php';
 //$a = new liw\backend\controllers\SiteController();
 //echo $a->index();
+(new common\config\ErrorHandler)->register();
 $app = new backend\config\Router();
 $app->run();
 
