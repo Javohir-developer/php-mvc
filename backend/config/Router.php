@@ -1,5 +1,5 @@
 <?php
-namespace common\config;
+namespace backend\config;
 
 class Router
 {
