@@ -1,0 +1,19 @@
+{
+    "name": "javohir/app",
+    "description": "php autload uchun test",
+    "authors": [
+        {
+            "name": "Javohir1998",
+            "email": "elmurodovjavohir1998@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "backend\\": "backend/",
+            "common\\":  "common/",
+            "frontend\\": "frontend/"
+        }
+    }
+}
