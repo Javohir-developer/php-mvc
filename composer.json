@@ -13,7 +13,9 @@
         "psr-4": {
             "backend\\": "backend/",
             "common\\":  "common/",
-            "frontend\\": "frontend/"
+            "frontend\\": "frontend/",
+            "companents\\": "companents/"
+
         }
     }
 }
