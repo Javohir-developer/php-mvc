@@ -1,7 +1,8 @@
 <?php
 namespace common\models;
-
-class User
+use common\config\Database;
+use backend\companents\Module;
+class User extends Module
 {
-
+    public static $table_name = 'user';
 }

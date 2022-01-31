@@ -1,10 +1,36 @@
 <?php
 namespace frontend\controllers;
-use frontend\companents\Controller;
-
+use common\companents\Controller;
+use go\DB\DB;
+use common\models\User;
 class SiteController extends Controller
 {
+    
     public function index(){
-        echo "site controller indexsi";
+        
+        $this->render('index');
     }
+
+
+    public function helped(){
+        $this->render('helped');
+    }
+
+    public function news(){
+        $this->render('news');
+    }
+
+    public function faq(){
+        $this->render('faq');
+    }
+
+    public function testimonials(){
+        $this->render('testimonials');
+    }
+
+
+    public function createWork(){
+        $this->render('create-work');
+    }
+
 }

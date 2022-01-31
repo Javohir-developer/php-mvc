@@ -10,10 +10,11 @@ class Router
         $routing = [
 //            SiteController uchun puthlar
             '/'         => ['controller' => 'Site', 'action' => 'index'],
-            '/create'   => ['controller' => 'Site', 'action' => 'create'],
-            '/update'   => ['controller' => 'Site', 'action' => 'update'],
-            '/view'     => ['controller' => 'Site', 'action' => 'view'],
-            '/delete'   => ['controller' => 'Site', 'action' => 'delete'],
+            '/helped'   => ['controller' => 'Site', 'action' => 'helped'],
+            '/news'   => ['controller' => 'Site', 'action' => 'news'],
+            '/faq'     => ['controller' => 'Site', 'action' => 'faq'],
+            '/testimonials'   => ['controller' => 'Site', 'action' => 'testimonials'],
+            '/create-work'   => ['controller' => 'Site', 'action' => 'createWork'],
         ];
         if (isset($routing[$route])){
             $controller_name = 'frontend\\controllers\\'.$routing[$route]['controller'].'Controller';

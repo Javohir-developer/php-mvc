@@ -9,7 +9,7 @@ error_reporting(E_ALL);       // устанавливает уровень от�
 
 ini_set('display_errors', 1); // дает команду интерпретатору php выводить все отслеживаемые ошибки в браузере
 require __DIR__ . '/../../vendor/autoload.php';
-//(new common\config\ErrorHandler)->register();
+(new common\companents\ErrorHandlerWeb)->register();
 
 $app = new backend\config\Router();
 $app->run();
