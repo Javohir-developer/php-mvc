@@ -8,8 +8,8 @@ class Database
         $params = array(
             'host'     => 'localhost',
             'username' => 'root',
-            'password' => '@Javohir1998',
-            'dbname'   => 'tourism',
+            'password' => 'Javohir1998$',
+            'dbname'   => 'muhtoj',
             'charset'  => 'utf8',
             '_debug'   => true,
             '_prefix'  => 'p_',

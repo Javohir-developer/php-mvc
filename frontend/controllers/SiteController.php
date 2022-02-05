@@ -33,4 +33,12 @@ class SiteController extends Controller
         $this->render('create-work');
     }
 
+    public function attention(){
+        $this->render('attention');
+    }
+
+    public function registration(){
+        $this->render('registration');
+    }
+
 }

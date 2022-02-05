@@ -6,7 +6,12 @@ namespace common\companents;
 
 class   Controller
 {
-    
+    function __construct() {
+        if (empty($_SESSION)){
+            return session_start();
+        }
+    }
+
 
     public function render($view, $attributes = null)
     {

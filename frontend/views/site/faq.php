@@ -7,120 +7,100 @@
         </div>
         <div class="faq">
             <div class="faq-q">
-    <span>
-      <b>Can I change my billing address?</b>
-    </span>
+                <span>
+                  <b>Что представляет собой Muhtoj.uz ?</b>
+                </span>
                 <p>
-                    Yes you can, provided your order has not been shipped. Mail us at care@farminii.com to change your order information. Please note that after your order is shipped you cannot change any details on your order.
-                </p>
-            </div>
-            <div class="faq-q">
-    <span>
-      <b>Can I change my order information?</b>
-    </span>
-                <p>
-                    Mail us at care@farminii.com to change your order information. Please note that after your order is shipped you cannot change any details on your order.
-                </p>
-            </div>
-            <div class="faq-q">
-    <span>
-      <b>Can I change the delivery address?</b>
-    </span>
-                <p>
-                    Mail us at ;care@farminii.com&amp; to change your order information. Please note that after your order is shipped you cannot change any details on your order.
-                </p>
-            </div>
-            <div class="faq-q">
-    <span>
-      <b>Can I customize the product?</b>
-    </span>
-                <p>
-                    You can email us a care@farminii. and your order will be placed as per your choice. Please mention preferable colors, sizes, finish and other details.
-                </p>
-            </div>
-            <div class="faq-q">
-    <span>
-      <b>Can I get a discount Coupon?</b>
-    </span>
-                <p>
-                    If you have received any discount Coupon on your email, you may use the same. You also have access to the Sale Section on the Website. Apart from that, there are no discount Offers currently available.
-                </p>
-            </div>
-            <div class="faq-q">
-    <span>
-      <b>Can I place an Order over the Phone?</b>
-    </span>
-                <p>
+                    Muhtoj.uz – это платформа коллективного сбор средств (на базе общественной организации) в поддержку позитивных социальных преобразований в Республике Молдова.
 
+                    Muhtoj.uz является мостом между гражданским обществом - людьми, которые хотят и могут участвовать в позитивных общественных процессах и людьми, которые нуждаются в помощи.
                 </p>
             </div>
             <div class="faq-q">
-    <span>
-      <b>Can I change my order information?</b>
-    </span>
+                <span>
+                  <b>Каковы цели вашей организации?</b>
+                </span>
                 <p>
-                    Yes, you can place the orders on the phone. We are available from 9.30 AM to 6.00 PM (Mon - Sat).
+                    Muhtoj.uz – это сбор средств для реализации социальных проектов в различных сферах жизнедеятельности – от проектов в агрикультуре, образовании и искусстве до оказания конкретной адресной помощи людям, оказавшимся трудной жизненной ситуации.
                 </p>
             </div>
+<!--            <div class="faq-q">-->
+<!--                <span>-->
+<!--                  <b>Как я могу зарегистрироваться на сайте Muhtoj.uz ?</b>-->
+<!--                </span>-->
+<!--                <p></p>-->
+<!--            </div>-->
+<!--            <div class="faq-q">-->
+<!--                <span>-->
+<!--                  <b>Каковы общие положения?</b>-->
+<!--                </span>-->
+<!--                <p></p>-->
+<!--            </div>-->
             <div class="faq-q">
-    <span>
-      <b>Guidelines For Writing Product Reviews</b>
-    </span>
-                <ul>
-                    <li>Product reviews on <b>FARMINII</b> are an optimum way to help fellow customers decide what to buy, and what to avoid. Here are tips to writing product reviews:
-                    </li>
-                    <li>
-                        It's always better to review a product you have used
-                    </li>
-                    <li>
-                        Provide a relevant, unbiased product overview. List all the pros and cons of the product. Make sure you write a review that stays consistent even after years
-                    </li>
-                    <li>
-                        Provide facts to back up your opinion.
-                    </li>
-                    <li>
-                        Do not provide inaccurate information. If you're not sure, research.
-                    </li>
-                    <li>
-                        Be creative but stay on topic.
-                    </li>
-                    <li>
-                        A quick edit and spell check will give you credibility. Also, break reviews into small pointers.
-                    </li>
-                </ul>
+                <span>
+                  <b>Какие документы необходимы для создания собственного проекта по сбору средств на сайте Muhtoj.uz ?</b>
+                </span>
+                <p>Необходимо удостоверение личности (булетин) для подписания контракта с администрации Caritate.md. В случае, если для создания проекта по сбору средств необходимы другие документы, мы оповестим Вас по электронной почте.Необходимо удостоверение личности (булетин) для подписания контракта с администрации Caritate.md. В случае, если для создания проекта по сбору средств необходимы другие документы, мы оповестим Вас по электронной почте.</p>
             </div>
             <div class="faq-q">
-    <span>
-      <b>How can I add more products to my order?</b>
-    </span>
-                <p>
-                    Mail us at care@farminii.com&amp; to add more products to your order before your order is shipped.
-                </p>
+                <span>
+                  <b>Как я могу убедиться, что деньги, пожертвованные мной, дойдут до назначенной цели?</b>
+                </span>
+                <p>Вся отчетность по расходованию средств находится в открытом доступе в соответствующем разделе сайта Muhtoj.uz</p>
             </div>
             <div class="faq-q">
-    <span>
-      <b>How can I get the discount Coupons?</b>
-    </span>
-                <p>
-                    If you are a new customer, you can register on our website and avail discount on your first order with us.
-                </p>
+                <span>
+                  <b>Какими способами я могу перевести/пожертвовать средства?</b>
+                </span>
+                <p>Способы перевода средств для пожертвований на Muhtoj.uz:
+
+                    Click, Pyme, денежный перевод и иные любые удобные для Вас платежные системы.</p>
             </div>
             <div class="faq-q">
-    <span>
-      <b>How do I make a Bank Transfer?</b>
-    </span>
-                <p>
-                    Bank Transfer is one of the Payment Options available. Below are the details of the Bank where you can make a Transfer.
-                </p>
-                <ul type="none" style="font-size:16px; font-weight:bold;">
-                    <li><i>Account Name</i> :</li>
-                    <li><i>Bank Name</i> :</li>
-                    <li><i>Account No.</i> :</li>
-                    <li><i>IFSC Code</i> :</li>
-                    <li><i>Branch</i> :</li>
-                    <li><i>MICR Code</i> :</li>
-                </ul>
+                <span>
+                  <b>Находится ли моё пожертвование в безопасности?</b>
+                </span>
+                <p>Да, потому что для обеспечения безопасности персональным данным и пожертвованиям, Muhtoj.uz использует пользовательскую платформу для пожертвований.</p>
             </div>
+            <div class="faq-q">
+                <span>
+                  <b>Есть ли возможность анонимных пожертвований?</b>
+                </span>
+                <p>Да, на сайте есть опция анонимного пожертвования.</p>
+            </div>
+            <div class="faq-q">
+                <span>
+                  <b>Является ли видеоматериал необходимым для проекта?</b>
+                </span>
+                <p>Видео всегда повышает шансы на успех Вашего проекта. Мы рекомендуем Вам подготовить информативный видеоматериал, который рассказывает о Вашем проекте. Удачный и наглядный видеосюжет – это очень хороший инструмент продвижения.</p>
+            </div>
+<!--            <div class="faq-q">-->
+<!--                <span>-->
+<!--                  <b>Guidelines For Writing Product Reviews</b>-->
+<!--                </span>-->
+<!--                <ul>-->
+<!--                    <li>Product reviews on <b>FARMINII</b> are an optimum way to help fellow customers decide what to buy, and what to avoid. Here are tips to writing product reviews:-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        It's always better to review a product you have used-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        Provide a relevant, unbiased product overview. List all the pros and cons of the product. Make sure you write a review that stays consistent even after years-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        Provide facts to back up your opinion.-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        Do not provide inaccurate information. If you're not sure, research.-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        Be creative but stay on topic.-->
+<!--                    </li>-->
+<!--                    <li>-->
+<!--                        A quick edit and spell check will give you credibility. Also, break reviews into small pointers.-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
         </div>
     </section>
 <?php include_once ('../views/layouts/home_layout/footer.php');?>

@@ -1,33 +1,20 @@
 <?php include_once('../views/layouts/home_layout/header.php');?>
     <section class="probootstrap-hero probootstrap-hero-inner" data-stellar-background-ratio="0.5">
-        <div class="">
-            <div class="row">
-                <div class="col-md-12 cont">
-
+        <div class="video">
+                <div class="col-md-12 cont cont1">
                     <div class="video-container">
                         <div class="responsive-video">
-                            <iframe class="header_vedio" src="https://www.youtube.com/embed/0KGW_Xm0hi0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                            <iframe class="header_vedio" src="https://www.youtube.com/embed/HF25qbYypig" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                         </div>
                     </div>
-
                     <div class="video-container">
                         <div class="responsive-video">
-                            <iframe class="header_vedio" src="https://www.youtube.com/embed/x4ffAb42so0" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+                            <iframe class="header_vedio" src="https://www.youtube.com/embed/N-QVKWmi0NU" allow='autoplay' frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
                         </div>
                     </div>
-
-                    <div class="video-container">
-                        <div class="responsive-video">
-                            <iframe class="header_vedio" src="https://www.youtube.com/embed/K7F9yv2cnVs?autoplay=1" allow='autoplay' frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
-        </div>
     </section>
-
     <section class="probootstrap-section">
         <div class="container">
             <div class="text-center home_header1">

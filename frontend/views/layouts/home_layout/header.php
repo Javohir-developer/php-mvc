@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/assets/css/styles-merged.css">
     <link rel="stylesheet" href="/assets/css/style.min.css">
     <link rel="stylesheet" href="/assets/css/custom.css">
+    <link rel = "icon" type = "image/png" href = "/assets/files/img/muhtoj2.png">
     <script src="/assets/js/vendor/html5shiv.min.js"></script>
     <script src="/assets/js/vendor/respond.min.js"></script>
 </head>
@@ -32,7 +33,12 @@
                 <li><a href="/news">Новости</a></li>
                 <li><a href="/faq">Вопросы</a></li>
                 <li><a href="/testimonials">Отзывы</a></li>
-                <li class="probootstra-cta-button last"><a href="/create-work" class="btn btn-primary">Добавить Случай</a></li>
+                <li>
+                    <a href="<?php echo !empty($_COOKIE['email']) ? '/user/logout' : '/user/login'?>" title="выход">
+                        <?php echo !empty($_COOKIE['email']) ? 'Выход' : 'Вход'?>
+                    </a>
+                </li>
+                <li class="probootstra-cta-button last"><a href="/attention" class="btn btn-primary">Добавить Случай</a></li>
             </ul>
         </div>
     </div>

@@ -8,14 +8,26 @@ class Router
         $route = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
         $routing = [
-//            SiteController uchun puthlar
+
+//            controller Site
             '/'         => ['controller' => 'Site', 'action' => 'index'],
             '/helped'   => ['controller' => 'Site', 'action' => 'helped'],
             '/news'   => ['controller' => 'Site', 'action' => 'news'],
             '/faq'     => ['controller' => 'Site', 'action' => 'faq'],
+            '/attention'     => ['controller' => 'Site', 'action' => 'attention'],
             '/testimonials'   => ['controller' => 'Site', 'action' => 'testimonials'],
-            '/create-work'   => ['controller' => 'Site', 'action' => 'createWork'],
+
+//            controller CreateWork
+            '/create-work/create-work'   => ['controller' => 'CreateWork', 'action' => 'createWork'],
+
+//            controller Users
+            '/user/registration'   => ['controller' => 'Users', 'action' => 'registration'],
+            '/user/login'   => ['controller' => 'Users', 'action' => 'login'],
+            '/user/logout'   => ['controller' => 'Users', 'action' => 'logout'],
+
+            '/admin'   => ['controller' => 'Admin', 'action' => 'index'],
         ];
+
         if (isset($routing[$route])){
             $controller_name = 'frontend\\controllers\\'.$routing[$route]['controller'].'Controller';
             $action_name = (string)$routing[$route]['action'];

@@ -1,6 +1,15 @@
 <?php include_once('../views/layouts/home_layout/header.php');?>
+
     <script src="/assets/js/jquery.min.js"></script>
     <div class="container1 container" >
+        <?php if (!empty($_COOKIE['status'])): ?>
+        <div class="alert alert-success alert-dismissible show" role="alert">
+            <strong><?=$_COOKIE['status']; ?></strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <?php endif;?>
         <h1 class="text-center">Добавьте свою заявку</h1>
         <div class="stepwizard">
             <div class="stepwizard-row setup-panel">
@@ -19,7 +28,7 @@
             </div>
         </div>
 
-        <form role="form">
+        <form role="form" action="">
             <div class="panel panel-primary setup-content" id="step-1">
                 <div class="panel-heading">
                     <h3 class="panel-title">Контактные данные</h3>
@@ -36,8 +45,23 @@
                                 <input maxlength="100" type="number" required="required" class="form-control"   />
                             </div>
                             <div class="form-group">
-                                <label class="control-label">Страна, Город <sup class="sup">*</sup></label>
-                                <input maxlength="100" type="text" required="required" class="form-control"  />
+                                <label for="cars">Страна, Область <sup class="sup">*</sup></label>
+                                <select required="required" class="form-control"  id="cars">
+                                    <option value="Город Ташкент" selected>Город Ташкент</option>
+                                    <option value="Республика Каракалпакстан">Республика Каракалпакстан</option>
+                                    <option value="Хорезмская область">Хорезмская область</option>
+                                    <option value="Ферганская область">Ферганская область</option>
+                                    <option value="Ташкентская область">Ташкентская область</option>
+                                    <option value="Сырдарьинская область">Сырдарьинская область</option>
+                                    <option value="Сурхандарьинская область">Сурхандарьинская область</option>
+                                    <option value="Самаркандская область">Самаркандская область</option>
+                                    <option value="Наманганская область">Наманганская область</option>
+                                    <option value="Навоийская область">Навоийская область</option>
+                                    <option value="Кашкадарьинская область">Кашкадарьинская область</option>
+                                    <option value="Джизакская область">Джизакская область</option>
+                                    <option value="Бухарская область">Бухарская область</option>
+                                    <option value="Андижанская область">Андижанская область</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -51,7 +75,7 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Телефон  <sup class="sup">*</sup></label>
-                                <input maxlength="100" type="text" required="required" class="form-control"   />
+                                <input maxlength="100" type="number" required="required" class="form-control"   />
                             </div>
                         </div>
                     </div>
@@ -67,7 +91,7 @@
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label class="control-label">Заголовок <sup class="sup">*</sup></label>
+                                <label class="control-label">Заголовок <sup class="sup">*</sup></label>(название болезни)
                                 <input  type="text" required="required" class="form-control"  />
                             </div>
                             <div class="form-group">
@@ -91,7 +115,7 @@
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group">
-                                <label class="control-label">Описание случая  <sup class="sup">*</sup></label>
+                                <label class="control-label">Описание случая  <sup class="sup">*</sup></label>(причина необходимости)
                                 <textarea name="textarea" required="required" class="form-control" id="textarea"  rows="10" cols="50"> </textarea>
                             </div>
                         </div>
