@@ -12,6 +12,8 @@
     <link rel = "icon" type = "image/png" href = "/assets/files/img/muhtoj2.png">
     <script src="/assets/js/vendor/html5shiv.min.js"></script>
     <script src="/assets/js/vendor/respond.min.js"></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 </head>
 <body>
 <nav class="navbar navbar-default probootstrap-navbar">
@@ -34,13 +36,29 @@
                 <li><a href="/faq">Вопросы</a></li>
                 <li><a href="/testimonials">Отзывы</a></li>
                 <li>
-                    <a href="<?php echo !empty($_COOKIE['email']) ? '/user/logout' : '/user/login'?>" title="выход">
-                        <?php echo !empty($_COOKIE['email']) ? 'Выход' : 'Вход'?>
+                    <a href="<?php echo !empty($_COOKIE['email']) ? '/user/logout' : ''?>" title="выход">
+                        <?php echo !empty($_COOKIE['email']) ? 'Выход' : ''?>
                     </a>
                 </li>
-                <li class="probootstra-cta-button last"><a href="/attention" class="btn btn-primary">Добавить Случай</a></li>
+                <li class="probootstra-cta-button last"><a href="<?php echo !empty($_COOKIE['email']) ? '/create-work/create-work' : '/attention'?>" class="btn btn-primary">Добавить Случай</a></li>
             </ul>
         </div>
     </div>
 </nav>
 
+<?php if (!empty($_COOKIE['status'])): ?>
+<div class="alert alert-success alert-dismissible show" role="alert">
+    <strong><?=$_COOKIE['status']; ?></strong>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+</div>
+<?php endif;?>
+<?php if (!empty($_COOKIE['errors'])): ?>
+    <div class="alert alert-danger alert-dismissible show" role="alert">
+        <strong><?=$_COOKIE['status']; ?></strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+<?php endif;?>

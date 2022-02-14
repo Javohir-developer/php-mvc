@@ -1,6 +1,7 @@
 <?php
 namespace frontend\controllers;
 use common\companents\Controller;
+use Exception;
 use go\DB\DB;
 use common\models\User;
 class UsersController extends Controller
@@ -25,10 +26,10 @@ class UsersController extends Controller
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $res = $user->login($_POST);
             if ($res == 'ok'){
-                $UserOne = $this::db()->query('SELECT `rule` FROM `users` WHERE `email`=?', [$_COOKIE['email']])->assoc();
-                if ($UserOne['rule'] === 'Admin'){
-                    $this->redirect('admin');
-                }
+//                $UserOne = User::db()->query('SELECT `rule` FROM `users` WHERE `email`=?', [$_POST['email']])->assoc();
+//                if ($UserOne[0]['rule'] === 'Admin'){
+//                    $this->redirect('/admin');
+//                }
                 $this->redirect('/create-work/create-work');
             }else{
                 $this->render('login', ['res'=>$res]);

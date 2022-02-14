@@ -13,6 +13,7 @@ class Router
             '/'         => ['controller' => 'Site', 'action' => 'index'],
             '/helped'   => ['controller' => 'Site', 'action' => 'helped'],
             '/news'   => ['controller' => 'Site', 'action' => 'news'],
+            '/newsViews'   => ['controller' => 'Site', 'action' => 'newsViews'],
             '/faq'     => ['controller' => 'Site', 'action' => 'faq'],
             '/attention'     => ['controller' => 'Site', 'action' => 'attention'],
             '/testimonials'   => ['controller' => 'Site', 'action' => 'testimonials'],
@@ -24,8 +25,6 @@ class Router
             '/user/registration'   => ['controller' => 'Users', 'action' => 'registration'],
             '/user/login'   => ['controller' => 'Users', 'action' => 'login'],
             '/user/logout'   => ['controller' => 'Users', 'action' => 'logout'],
-
-            '/admin'   => ['controller' => 'Admin', 'action' => 'index'],
         ];
 
         if (isset($routing[$route])){

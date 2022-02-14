@@ -8,12 +8,20 @@ class Router
         $route = urldecode(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH));
 
         $routing = [
-//            SiteController uchun puthlar
-            '/'         => ['controller' => 'Site', 'action' => 'index'],
-            '/create'   => ['controller' => 'Site', 'action' => 'create'],
-            '/update'   => ['controller' => 'Site', 'action' => 'update'],
-            '/view'     => ['controller' => 'Site', 'action' => 'view'],
-            '/delete'   => ['controller' => 'Site', 'action' => 'delete'],
+
+//            Controller Site
+            '/' => ['controller' => 'Site', 'action' => !empty($_COOKIE['email']) ? 'index' : 'login'],
+            '/login' => ['controller' => 'Site', 'action' => 'login'],
+            '/logout' => ['controller' => 'Site', 'action' => 'logout'],
+
+//            controller News
+            '/news/index' => ['controller' => 'News', 'action' => 'index'],
+            '/news/create' => ['controller' => 'News', 'action' => 'create'],
+            '/news/update' => ['controller' => 'News', 'action' => 'update'],
+            '/news/delete' => ['controller' => 'News', 'action' => 'delete'],
+
+//            controller News
+            '/works/index' => ['controller' => 'Works', 'action' => 'index'],
         ];
         if (isset($routing[$route])){
             $controller_name = 'backend\\controllers\\'.$routing[$route]['controller'].'Controller';

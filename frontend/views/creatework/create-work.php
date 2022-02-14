@@ -2,14 +2,7 @@
 
     <script src="/assets/js/jquery.min.js"></script>
     <div class="container1 container" >
-        <?php if (!empty($_COOKIE['status'])): ?>
-        <div class="alert alert-success alert-dismissible show" role="alert">
-            <strong><?=$_COOKIE['status']; ?></strong>
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-        </div>
-        <?php endif;?>
+
         <h1 class="text-center">Добавьте свою заявку</h1>
         <div class="stepwizard">
             <div class="stepwizard-row setup-panel">
@@ -129,20 +122,35 @@
                     <h3 class="panel-title">Дополнительная информация</h3>
                 </div>
                 <div class="panel-body">
-                    <div class="form-group">
-                        <label class="control-label">Добавить документы <sup class="sup">*</sup></label>
-                        <input maxlength="100" type="file" required="required" class="form-control"  />
+                    <div  class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Добавить документы <sup class="sup">*</sup></label>
+                                <input type="file"  name="file[]" accept=".doc, .docx,.ppt, .pptx,.txt,.pdf" class="form-control" multiple />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Добавить фото  <sup class="sup">*</sup></label>
+                                <input  type="file" name="image[]" accept="image/*"  class="form-control" multiple/>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group">
+                                <label class="control-label">Добавить видео</label>
+                                <input type="file"  name="video" accept="video/*" class="form-control"  />
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label">Добавить пластик карта</label>
+                                <input type="number"  name="humo_card" placeholder="0000 0000 0000 0000" class="form-control"  />
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label">Добавить фото  <sup class="sup">*</sup></label>
-                        <input  type="file" name="image[]"  class="form-control" accept="image/*" multiple=""/>
-                    </div>
+
+
                     <button class="btn btn-success pull-right" type="submit">Отправить!</button>
                 </div>
             </div>
         </form>
     </div>
-
     <style>
         .container1{
             margin-top: 165px;

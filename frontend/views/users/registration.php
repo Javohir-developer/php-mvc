@@ -16,9 +16,9 @@
                 </div>
             <?php endif;?>
             <form action="/user/registration" method="POST">
-                <input name="email" type="email" placeholder="EMAIL" required>
-                <input name="phone" type="number" placeholder="PHONE" required><br>
-                <input name="password" type="password" placeholder="PASSWORD" required><br>
+                <input name="email" type="email"  minlength="10" placeholder="EMAIL" required>
+                <input name="phone" type="number" maxlength="12" minlength="12" placeholder="PHONE" required><br>
+                <input name="password" type="password"   minlength="10" placeholder="PASSWORD" required><br>
                 <button name="registration" class="btn btn_reg" type="submit">Регистратсия</button>
             </form>
             <a class="text-center ume" href="/user/login">У меня есть аккаунт</a>
