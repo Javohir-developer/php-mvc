@@ -20,9 +20,24 @@
                 <input name="phone" type="number" maxlength="12" minlength="12" placeholder="PHONE" required><br>
                 <input name="password" type="password"   minlength="10" placeholder="PASSWORD" required><br>
                 <button name="registration" class="btn btn_reg" type="submit">Регистратсия</button>
+                <div class="col-md-4 recaptcha" id="g-recaptcha3"></div>
             </form>
             <a class="text-center ume" href="/user/login">У меня есть аккаунт</a>
         </div>
     </div>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>
+    <script>
+        $(document).ready(function () {
+            setTimeout(function () {
 
+                $('.recaptcha').each(function () {
+                    grecaptcha.render(this.id, {
+                        'sitekey': '6LdVkwkUAAAAACeeETRX--v9Js0vWyjQOTIZxxeB',
+                        "theme": "light"
+                    });
+                });
+
+            }, 2000);
+        });
+    </script>
 <?php include_once ('../views/layouts/home_layout/footer.php');?>

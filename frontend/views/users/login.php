@@ -19,9 +19,27 @@
                 <input name="email" type="email" placeholder="EMAIL" required>
                 <input name="password" type="password" placeholder="PASSWORD" required><br>
                 <button name="registration" class="btn btn_reg" type="submit">Авторизация</button>
+                <div class="col-md-4 recaptcha" id="g-recaptcha3"></div>
             </form>
             <a class="text-center ume" href="/user/registration">Регистратсия</a>
         </div>
     </div>
+
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>
+    <script>
+        $(document).ready(function () {
+// setTimout is not necessary
+            setTimeout(function () {
+
+                $('.recaptcha').each(function () {
+                    grecaptcha.render(this.id, {
+                        'sitekey': '6LdVkwkUAAAAACeeETRX--v9Js0vWyjQOTIZxxeB',
+                        "theme": "light"
+                    });
+                });
+
+            }, 2000);
+        });
+    </script>
 
 <?php include_once ('../views/layouts/home_layout/footer.php');?>

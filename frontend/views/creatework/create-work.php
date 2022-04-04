@@ -1,8 +1,6 @@
 <?php include_once('../views/layouts/home_layout/header.php');?>
-
     <script src="/assets/js/jquery.min.js"></script>
     <div class="container1 container" >
-
         <h1 class="text-center">Добавьте свою заявку</h1>
         <div class="stepwizard">
             <div class="stepwizard-row setup-panel">
@@ -20,26 +18,30 @@
                 </div>
             </div>
         </div>
-
-        <form role="form" action="">
+        <form role="form" action="/create-work/create"  method="post" enctype="multipart/form-data">
             <div class="panel panel-primary setup-content" id="step-1">
                 <div class="panel-heading">
                     <h3 class="panel-title">Контактные данные</h3>
+                    <ul>
+                        <?php if(isset($res) && count($res)){ foreach ($res as $key => $value){ ?>
+                            <li style="color: red;"><?= $value;?></li>
+                        <?php }} ?>
+                    </ul>
                 </div>
                 <div class="panel-body">
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label">Имя, Фамилия <sup class="sup">*</sup></label>
-                                <input maxlength="100" type="text" required="required" class="form-control"  />
+                                <input maxlength="100" name="name" type="text" required="required" class="form-control"  />
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Возраст  <sup class="sup">*</sup></label>
-                                <input maxlength="100" type="number" required="required" class="form-control"   />
+                                <input maxlength="100" name="age" type="number" required="required" class="form-control"   />
                             </div>
                             <div class="form-group">
                                 <label for="cars">Страна, Область <sup class="sup">*</sup></label>
-                                <select required="required" class="form-control"  id="cars">
+                                <select required="required" class="form-control"  id="cars" name="country">
                                     <option value="Город Ташкент" selected>Город Ташкент</option>
                                     <option value="Республика Каракалпакстан">Республика Каракалпакстан</option>
                                     <option value="Хорезмская область">Хорезмская область</option>
@@ -60,22 +62,21 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label">Адрес  <sup class="sup">*</sup></label>
-                                <input  type="text" required="required" class="form-control"   />
+                                <input  type="text" name="adress" required="required" class="form-control"   />
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Телегам <sup class="sup">*</sup></label>
-                                <input maxlength="100" type="text" required="required" class="form-control"  />
+                                <input maxlength="100" name="telegram" type="text" required="required" class="form-control"  />
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Телефон  <sup class="sup">*</sup></label>
-                                <input maxlength="100" type="number" required="required" class="form-control"   />
+                                <input maxlength="100" type="number" name="tell" required="required" class="form-control"   />
                             </div>
                         </div>
                     </div>
                     <button class="btn btn-primary nextBtn pull-right"  type="button">Следующий</button>
                 </div>
             </div>
-
             <div class="panel panel-primary setup-content" id="step-2">
                 <div class="panel-heading">
                     <h3 class="panel-title">Общая информация</h3>
@@ -85,23 +86,23 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label">Заголовок <sup class="sup">*</sup></label>(название болезни)
-                                <input  type="text" required="required" class="form-control"  />
+                                <input  type="text" required="required" name="title" class="form-control"  />
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Необходимая сумма  <sup class="sup">sum *</sup></label>
-                                <input maxlength="100" type="number" required="required" class="form-control"   />
+                                <input maxlength="100" type="number" name="price" required="required" class="form-control"   />
                             </div>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label class="control-label">Дата начала <sup class="sup">*</sup></label>
-                                        <input maxlength="100" type="date" required="required" class="form-control"  />
+                                        <input maxlength="100" type="date" name="begin_date" required="required" class="form-control"  />
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label class="control-label">Дата окончания <sup class="sup">*</sup></label>
-                                        <input maxlength="100" type="date" required="required" class="form-control"   />
+                                        <input maxlength="100" type="date" name="end_date" required="required" class="form-control"   />
                                     </div>
                                 </div>
                             </div>
@@ -109,14 +110,13 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label">Описание случая  <sup class="sup">*</sup></label>(причина необходимости)
-                                <textarea name="textarea" required="required" class="form-control" id="textarea"  rows="10" cols="50"> </textarea>
+                                <textarea name="commit" required="required" class="form-control" id="textarea"  rows="10" cols="50"> </textarea>
                             </div>
                         </div>
                     </div>
                     <button class="btn btn-primary nextBtn pull-right" type="button">Следующий</button>
                 </div>
             </div>
-
             <div class="panel panel-primary setup-content" id="step-3">
                 <div class="panel-heading">
                     <h3 class="panel-title">Дополнительная информация</h3>
@@ -126,11 +126,11 @@
                         <div class="col-sm-6">
                             <div class="form-group">
                                 <label class="control-label">Добавить документы <sup class="sup">*</sup></label>
-                                <input type="file"  name="file[]" accept=".doc, .docx,.ppt, .pptx,.txt,.pdf" class="form-control" multiple />
+                                <input type="file"  name="files[]" accept=".doc, .docx,.ppt, .pptx,.txt,.pdf,.png,.jpg,.jpeg" class="form-control" multiple  required/>
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Добавить фото  <sup class="sup">*</sup></label>
-                                <input  type="file" name="image[]" accept="image/*"  class="form-control" multiple/>
+                                <input  type="file" name="images[]" accept="image/*"  class="form-control" multiple required/>
                             </div>
                         </div>
                         <div class="col-sm-6">
@@ -140,16 +140,16 @@
                             </div>
                             <div class="form-group">
                                 <label class="control-label">Добавить пластик карта</label>
-                                <input type="number"  name="humo_card" placeholder="0000 0000 0000 0000" class="form-control"  />
+                                <input type="number"  name="humo_card" placeholder="0000 0000 0000 0000" class="form-control"  required/>
                             </div>
                         </div>
                     </div>
-
-
                     <button class="btn btn-success pull-right" type="submit">Отправить!</button>
                 </div>
             </div>
+            <div class="col-md-4 recaptcha" id="g-recaptcha3"></div>
         </form>
+
     </div>
     <style>
         .container1{
@@ -209,8 +209,20 @@
         /*    color: #eee!important;*/
         /*}*/
     </style>
+    <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>
     <script>
         $(document).ready(function () {
+// setTimout is not necessary
+            setTimeout(function() {
+
+                $('.recaptcha').each(function() {
+                    grecaptcha.render(this.id, {
+                        'sitekey': '6LdVkwkUAAAAACeeETRX--v9Js0vWyjQOTIZxxeB',
+                        "theme":"light"
+                    });
+                });
+
+            }, 2000);
 
             var navListItems = $('div.setup-panel div a'),
                 allWells = $('.setup-content'),

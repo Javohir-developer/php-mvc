@@ -20,6 +20,7 @@ class Router
 
 //            controller CreateWork
             '/create-work/create-work'   => ['controller' => 'CreateWork', 'action' => 'createWork'],
+            '/create-work/create'   => ['controller' => 'CreateWork', 'action' => 'create'],
 
 //            controller Users
             '/user/registration'   => ['controller' => 'Users', 'action' => 'registration'],

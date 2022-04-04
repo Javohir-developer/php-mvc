@@ -12,8 +12,8 @@ class News extends Module
         $wget = new WgetCompanent();
         if (!empty($post['title_ru']) &&  strlen($post['text_ru']) > 20 && !empty($_FILES['image']['name'])){
             if($_FILES['image']['size'] < 2097152){
-                $file_name = microtime(true).$_FILES["image"]['name'];
-                if ($wget->uploade($_FILES["image"],  '../../frontend/web/assets/files/news/'.$file_name)) {
+                $file_name = 10000 * microtime(true).$_FILES["image"]['name'];
+                if ($wget->uploade($_FILES["image"]['tmp_name'],  '../../frontend/web/assets/files/news/'.$file_name)) {
                     $values = [
                         [$post['title_ru'], $post['text_ru'], isset($post['status'])  ? $post['status'] : 0, $file_name, !empty($post['date']) ? $post['date'] : date('Y-m-d') ]
                     ];
@@ -42,8 +42,8 @@ class News extends Module
         $wget = new WgetCompanent();
         if (!empty($post['id'])){
             if(!empty($_FILES['image']['name']) &&  $_FILES['image']['size'] < 2097152){
-                $file_name = microtime(true).$_FILES["image"]['name'];
-                if (!$wget->uploade($_FILES["image"],  '../../frontend/web/assets/files/news/'.$file_name)) {
+                $file_name = 10000 * microtime(true).$_FILES["image"]['name'];
+                if (!$wget->uploade($_FILES["image"]['tmp_name'],  '../../frontend/web/assets/files/news/'.$file_name)) {
                     $errors[]='ошибка загрузки файла';
                 }
             }else{
