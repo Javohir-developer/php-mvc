@@ -10,22 +10,23 @@ class Router
         $routing = [
 
 //            controller Site
-            '/'         => ['controller' => 'Site', 'action' => 'index'],
-            '/helped'   => ['controller' => 'Site', 'action' => 'helped'],
-            '/news'   => ['controller' => 'Site', 'action' => 'news'],
-            '/newsViews'   => ['controller' => 'Site', 'action' => 'newsViews'],
-            '/faq'     => ['controller' => 'Site', 'action' => 'faq'],
-            '/attention'     => ['controller' => 'Site', 'action' => 'attention'],
-            '/testimonials'   => ['controller' => 'Site', 'action' => 'testimonials'],
+            '/'             => ['controller' => 'Site', 'action' => 'index'],
+            '/view'         => ['controller' => 'Site', 'action' => 'view'],
+            '/helped'       => ['controller' => 'Site', 'action' => 'helped'],
+            '/news'         => ['controller' => 'Site', 'action' => 'news'],
+            '/newsViews'    => ['controller' => 'Site', 'action' => 'newsViews'],
+            '/faq'          => ['controller' => 'Site', 'action' => 'faq'],
+            '/attention'    => ['controller' => 'Site', 'action' => 'attention'],
+            '/testimonials' => ['controller' => 'Site', 'action' => 'testimonials'],
 
 //            controller CreateWork
-            '/create-work/create-work'   => ['controller' => 'CreateWork', 'action' => 'createWork'],
-            '/create-work/create'   => ['controller' => 'CreateWork', 'action' => 'create'],
+            '/create-work/create-work'  => ['controller' => 'CreateWork', 'action' => 'createWork'],
+            '/create-work/create'       => ['controller' => 'CreateWork', 'action' => 'create'],
 
 //            controller Users
-            '/user/registration'   => ['controller' => 'Users', 'action' => 'registration'],
-            '/user/login'   => ['controller' => 'Users', 'action' => 'login'],
-            '/user/logout'   => ['controller' => 'Users', 'action' => 'logout'],
+            '/user/registration'    => ['controller' => 'Users', 'action' => 'registration'],
+            '/user/login'           => ['controller' => 'Users', 'action' => 'login'],
+            '/user/logout'          => ['controller' => 'Users', 'action' => 'logout'],
         ];
 
         if (isset($routing[$route])){
