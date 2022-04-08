@@ -30,7 +30,7 @@
 
         <div id="navbar-collapse" class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/">Все случаи</a></li>
+                <li><a href="/views">Все случаи</a></li>
                 <li><a href="/helped">Кому Помогли</a></li>
                 <li><a href="/news">Новости</a></li>
                 <li><a href="/faq">Вопросы</a></li>

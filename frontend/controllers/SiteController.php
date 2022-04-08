@@ -16,15 +16,24 @@ class SiteController extends Controller
     }
 
     public function view(){
-        $this->render('view');
+        $new = new $this->model;
+        $applications = $new::db()->query('SELECT id, title, price, images, files FROM `application` WHERE `id`=?i', [$_GET['id']])->row();
+        $this->render('view', ['applications' => $applications]);
+    }
+    public function views(){
+        $new = new $this->model;
+        $applications = $new::db()->query('SELECT id, title, price, images, files FROM `application` WHERE status = 1 and status_help = 0 ORDER BY id DESC')->objects();
+        $this->render('views', ['applications' => $applications]);
     }
     public function helped(){
-        $this->render('helped');
+        $new = new $this->model;
+        $applications = $new::db()->query('SELECT id, title, price, images, files FROM `application` WHERE status = 1 and status_help = 1 ORDER BY id DESC')->objects();
+        $this->render('helped', ['applications' => $applications]);
     }
 
     public function news(){
         $new =  new $this->model;
-        $news = $new::db()->query('SELECT * FROM `news` LIMIT 9')->objects();
+        $news = $new::db()->query('SELECT * FROM `news`')->objects();
         $this->render('news', ['news' => $news]);
     }
 
@@ -32,6 +41,10 @@ class SiteController extends Controller
         $new = new $this->model;
         $news = $new::db()->query('SELECT * FROM `news` WHERE `id`=?i', [$_GET['id']])->row();
         $this->render('newsViews', ['news' => $news]);
+    }
+
+    public function payment(){
+        $this->render('payment');
     }
 
     public function faq(){

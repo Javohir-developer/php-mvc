@@ -12,7 +12,9 @@ class Router
 //            controller Site
             '/'             => ['controller' => 'Site', 'action' => 'index'],
             '/view'         => ['controller' => 'Site', 'action' => 'view'],
+            '/views'        => ['controller' => 'Site', 'action' => 'views'],
             '/helped'       => ['controller' => 'Site', 'action' => 'helped'],
+            '/payment'      => ['controller' => 'Site', 'action' => 'payment'],
             '/news'         => ['controller' => 'Site', 'action' => 'news'],
             '/newsViews'    => ['controller' => 'Site', 'action' => 'newsViews'],
             '/faq'          => ['controller' => 'Site', 'action' => 'faq'],
